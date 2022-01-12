@@ -1,0 +1,16 @@
+<h3>{{showTitle}}</h3>
+<form action="/api/courses" method="post">
+  <input type="hidden" name="_id" value={{course._id}} />
+  <div>
+    <label>Course Name</label>
+    <input type="text" name="CourseName" />
+  </div>
+  <div>
+    <label>Department Name</label>
+    <input type="text" name="DepartmentName" />
+  </div>
+  <div>
+    <button type="submit">Done</button>
+  </div>
+</form>
+<h6 style="margin-top: 30px;"><a href="/api/courses/list">Display Courses</a></h6>

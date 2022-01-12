@@ -1,0 +1,40 @@
+<table>
+  <thead>
+    <tr>
+      <th
+        style="border: 1px solid;
+  text-align: left;padding: 10px"
+      >Course Name</th>
+      <th
+        style="border: 1px solid;
+  text-align: left; padding: 10px"
+      >Department Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each list}}
+      <tr>
+        <td
+          style=" border: 1px solid;
+  text-align: left;padding: 10px"
+        >{{this.courseName}}</td>
+        <td
+          style=" border: 1px solid;
+  text-align: left;
+  padding: 10px"
+        >{{this.departmentName}}</td>
+        <td>
+          <a href="/api/courses/{{this._id}}"><i
+              class="fa fa-pencil fa-lg"
+              aria-hidden="true"
+            ></i></a>
+          <a href="/delete/{{this._id}}"><i
+              class="fa fa-trash fa-lg"
+              aria-hidden="true"
+            ></i></a>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
+<h6 style="margin-top: 30px;"><a href="/api/courses">Add New Course</a></h6>
